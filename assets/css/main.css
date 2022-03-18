@@ -1,0 +1,952 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+:root {
+  --background-color: #FCFCFC;
+  --navbar-background: #000000;
+  --navbar-font: 'Hind Madurai', sans-serif;
+  --heading-font: 'Hind Madurai', sans-serif;
+  --sub-heading-font: 'Martel Sans', sans-serif;
+}
+
+
+/* Landing Page */
+
+/* Navbar */
+
+.navbar {
+  position: relative;
+  width: 100%;
+}
+
+.navbar-dark {
+  color: #FCFCFC !important;
+}
+
+.bg-dark {
+  background-color: var(--navbar-background) !important;
+}
+
+.navbar-brand {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: var(--navbar-font);
+}
+.navbar-brand-2 {
+  font-size: 50px;
+  font-weight: 600;
+  font-family: var(--navbar-font);
+  text-decoration: none;
+  color: black;
+}
+
+.color-change {
+  color: #D80032;
+}
+
+.navbar-nav {
+  position: relative;
+  left: 30px;
+}
+
+.nav-item {
+  padding-right: 20px;
+  font-family: var(--navbar-font) !important;
+  display: inline-block;
+  position: relative;
+  color: #D80032;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  width: 70%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #D80032;
+  transform-origin: bottom right;
+  transition: transform 0.45s ease-out;
+}
+
+.nav-item:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.btn-outline-link {
+  border-color: #EF233C;
+  color: #FCFCFC;
+  margin-right: 15px;
+  font-family: var(--heading-font);
+}
+
+.btn-outline-link:hover {
+  background-color: #D80032;
+  border-color: #D80032;
+  color: #FCFCFC;
+  transition: 0.5s;
+}
+
+/* Akhir Navbar */
+
+/* Hero */
+
+.swiper {
+  width: 100%;
+  height: 100vh;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  cursor: grab;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide:active {
+  cursor: grabbing;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-button-next {
+  margin-right: 70px;
+  color: #fcfcfc83 !important;
+}
+
+.swiper-button-next:hover {
+  color: #D80032 !important;
+}
+
+.swiper-button-prev {
+  margin-left: 70px;
+  color: #fcfcfc83 !important;
+}
+
+.swiper-button-prev:hover {
+  color: #D80032 !important;
+}
+
+.swiper-pagination-bullet {
+  width: 1rem !important;
+  height: 1rem !important;
+  background-color: #EF233C !important;
+}
+
+.swiper-pagination-bullet:hover {
+  background-color: #EF233C;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.caption {
+  position: absolute;
+  width: 100%;
+  height: 603px;
+  color: #FCFCFC;
+  background-color: #000000ab;
+  z-index: 99;
+}
+
+.caption h1 {
+  position: relative;
+  text-transform: uppercase;
+  top: 200px;
+  font-size: 50px;
+  font-weight: 600;
+  font-family: var(--heading-font);
+}
+
+.caption p {
+  width: 540px;
+  position: relative;
+  text-transform: capitalize;
+  top: 210px;
+  left: 30%;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: var(--sub-heading-font);
+}
+
+.caption .btn-primary {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  padding-top: 11px;
+  font-size: 18px;
+  top: 240px;
+  background-color: #EF233C;
+  border-color: #EF233C;
+}
+
+.btn-primary:hover {
+  background-color: #D80032;
+  border-color: #D80032;
+}
+
+.about {
+  height: 100vh;
+}
+
+/* Akhir Hero */
+
+/* Back to top */
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 1;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #EF233C;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #D80032;
+}
+
+/* Akhir Back to top */
+
+/* Why Us */
+
+.why-us-section {
+  position: relative;
+  width: auto;
+  height: 100vh;
+  top: 40px;
+  background-color: var(--background-color);
+}
+
+.why-us-heading {
+  position: relative;
+  top: -.9rem !important;
+  text-align: center;
+  font-size: 28px !important;
+  font-family: var(--heading-font);
+  font-weight: 600;
+}
+
+.why-us-card {
+  position: relative;
+  top: 3vh;
+  width: auto;
+  height: 320px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.why-us-card:hover {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.icons {
+  position: relative;
+  top: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #DE1A1A;
+  font-size: 80px !important;
+}
+
+.why-us-cards-title {
+  position: relative;
+  top: -1px;
+  text-align: center;
+  font-family: var(--heading-font);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.why-us-cards-text {
+  position: relative;
+  top: 10px !important;
+  font-family: var(--sub-heading-font) !important;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400 !important;
+}
+
+/* Akhir Why Us */
+
+/* Product */
+.product-highlight-section {
+  position: relative;
+  display: block;
+  margin-bottom: 10%;
+  top: 80px;
+  background-color: #f5f5f5 !important;
+  width: 100%;
+  height: 100%;
+}
+
+.product-heading {
+  position: relative;
+  top: 40px;
+  text-align: center;
+  font-size: 28px !important;
+  font-family: var(--heading-font);
+  font-weight: 600;
+}
+
+.cards-container {
+  left: 2%;
+  display: flex;
+  position: relative;
+}
+
+.card-box {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.card-body a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.product-card {
+  position: relative;
+  top: 60px;
+  width: 260px;
+  height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  border-radius: 10px;
+}
+
+.product-card:hover {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.product-card-img {
+  position: relative;
+  top: 19px;
+  left: 19px;
+  width: 220px;
+  border-radius: 10px;
+}
+
+.product-titles {
+  position: relative;
+  top: 20px;
+  font-size: 18px !important;
+  font-family: var(--heading-font);
+  font-weight: 400;
+  text-align: center;
+}
+
+.product-price {
+  position: relative;
+  top: 25px;
+  font-size: 18px;
+  font-family: var(--sub-heading-font);
+  font-weight: 600;
+  text-align: center;
+  margin: 0px;
+}
+
+.real-price {
+  text-decoration: line-through;
+  color: #ef233bc5;
+}
+
+.discount-price {
+  color: #000000;
+}
+
+.product-promo {
+  padding: 5px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-weight: 600;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+/* Akhir Product */
+
+/* Footer */
+.container-footer {
+  z-index: -1;
+  display: block;
+}
+
+.footer {
+  position: relative;
+  display: block;
+  background-color: var(--navbar-background);
+  width: 100%;
+  height: auto;
+}
+
+.footer-title h5 {
+  position: relative;
+  top: 70px;
+  font-family: var(--heading-font);
+  font-size: 20px;
+  font-weight: 500;
+  color: #FCFCFC !important;
+}
+
+.nav {
+  position: relative;
+  top: 80px;
+  margin-bottom: 80px;
+}
+
+.navs-link {
+  color: #FCFCFC;
+  font-family: var(--sub-heading-font);
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.navs-link:hover {
+  color: #D80032;
+}
+
+.pembayaran-text {
+  position: relative;
+  top: 70px;
+  left: 220px;
+  font-size: 20px;
+  font-family: var(--heading-font);
+  font-weight: 500;
+  color: #FCFCFC;
+}
+
+.logo-pembayaran {
+  position: relative;
+  top: 90px;
+  left: 220px;
+  width: 200px !important;
+}
+
+.copyright {
+  color: #FCFCFC;
+  font-family: var(--sub-heading-font);
+  font-weight: 400;
+  color: #FCFCFC;
+  font-family: var(--sub-heading-font);
+  font-weight: 400;
+}
+
+.developer {
+  color: #EF233C;
+  text-decoration: none;
+  font-family: var(--sub-heading-font);
+  font-weight: 400;
+}
+
+.developer:hover {
+  color: #D80032;
+}
+
+/* Akhir Footer */
+/* Akhir Landing Page */
+
+/* About Page */
+/* Hero */
+
+.hero-title {
+  position: relative;
+  top: 1.5rem;
+  text-align: center;
+  font-family: var(--heading-font);
+  font-weight: 600;
+}
+
+.about-ido {
+  width: 700px;
+  border-radius: 30px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+
+.about-ido:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.display-5 {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.ido-warehouse {
+  width: 700px;
+  border-radius: 30px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+
+.ido-warehouse:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+/* Akhir Hero */
+/* Akhir About Page */
+
+/* Product Page */
+/* SideBar */
+
+.sizeNav {
+  background-color: transparent;
+  position: absolute;
+  color: #000000;
+  width: 15%;
+  margin: 8px;
+  z-index: 1;
+  left: 1.35%;
+}
+
+.button-toggler {
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid black;
+  border-radius: 2%;
+}
+
+.btn-kategori {
+  font-size: 1rem;
+}
+
+.toggle-sideNav {
+  color: #000000 !important;
+}
+
+/* Product cards */
+.product-title {
+  text-align: center;
+  padding: 10px;
+}
+
+.navbar-nav {
+  margin-bottom: 10px;
+}
+
+.dropdown-item {
+  color: white;
+}
+
+.dropdown-item:hover {
+  color: black;
+}
+
+/* Card-product */
+.card-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper-cards {
+  padding-top: 10px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  left: 1%;
+}
+
+.cards-space {
+  display: flex;
+  height: 100%;
+
+}
+
+.cards {
+  display: flex;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 100%;
+}
+
+.product-judul {
+  width: 100%;
+  height: 25px;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0px;
+  margin-bottom: 10px;
+}
+
+.stok-product {
+  font-size: .75rem;
+  font-weight: 600;
+  padding: 0px;
+  margin: 0%;
+}
+
+.gambar-hover:hover {
+  transform: scale(1.5);
+  transition: .5s;
+}
+.wrapper-gambar{
+  width: 100%;
+  overflow: hidden;
+}
+.info {
+  background-color: #f1f0f0;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  margin: 0px;
+  border-radius: 5px;
+}
+
+.card-img {
+  border-radius: 5px;
+  width: 80%;
+  margin: auto;
+  padding-top: 20px;
+  display: block;
+
+}
+
+.detail {
+  margin: auto;
+  display: block;
+}
+
+.close-btn {
+  color: white;
+  transition: .3s;
+}
+
+.close-btn:hover {
+  background-color: white;
+  color: #000000;
+}
+
+/* Akhir Product Page */
+
+/* Responsive Page */
+@media only screen and (max-width:500px) {
+
+  /* For mobile phones: */
+  /* Potrait */
+
+  /* Product Highlight */
+  .cards-container {
+    display: block;
+  }
+
+  .container-product {
+    position: relative;
+    display: flex;
+    padding-bottom: 10%;
+    height: max-content;
+  }
+
+  .card-box {
+    width: 45%;
+  }
+
+  .product-card {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .product-card-img {
+    width: 75%;
+  }
+
+
+  /* Footer Responsive */
+  .container-footer {
+    display: block;
+    z-index: -1;
+  }
+
+  .footer {
+    position: relative;
+    display: block;
+    background-color: var(--navbar-background);
+    width: 100%;
+    height: 100%;
+  }
+
+  .footer-title h5 {
+    position: relative;
+    top: 70px;
+    left: 200%;
+    font-family: var(--heading-font);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #FCFCFC !important;
+  }
+
+  .col-2 {
+    margin: 0 5% 5% 0;
+    padding: 0 7% 0 0;
+  }
+
+  .nav {
+    position: relative;
+    top: 80px;
+    left: 210% !important;
+    margin-bottom: 80px;
+  }
+
+  .navs-link {
+    color: #FCFCFC;
+    font-family: var(--sub-heading-font);
+    font-size: 10px;
+    text-decoration: none;
+  }
+
+  .pembayaran-text {
+    width: 300px;
+    font-size: 1.5rem;
+    position: relative;
+    top: 30px;
+    left: 70%;
+    font-family: var(--heading-font);
+    font-weight: 500;
+    color: #FCFCFC;
+  }
+
+  .logo-pembayaran {
+    position: relative;
+    top: 40px;
+    left: 30%;
+    width: 100%;
+    margin-bottom: 50%;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+
+  .footer-text {
+    text-align: center;
+  }
+
+  /* Product Responsive */
+  .product-title {
+    margin-top: 6px;
+  }
+
+  .wrapper-cards {
+    left: 2.5%;
+  }
+
+  .cards-space {
+    width: 50%;
+  }
+
+  .info {
+    margin-top: 20px;
+  }
+
+  /* Sidebar */
+  .btn-kategori {
+    display: none;
+  }
+
+  .sizeNav {
+    background-color: transparent;
+    position: absolute;
+    color: #000000;
+    width: 15%;
+    margin: 8px;
+    z-index: 1;
+    left: 3.5%;
+  }
+
+  .sideCanvas {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width:900px) {
+
+  /* For mobile phones: */
+  /* Potrait */
+  .why-us-section {
+    height: 75vh;
+  }
+
+  .whyUs {
+    justify-content: center;
+  }
+
+  /* Product Highlight */
+  .cards-container {
+    display: block;
+    height: max-content;
+    padding-bottom: 15%;
+  }
+
+  .container-product {
+    position: relative;
+    display: flex;
+    left: 3%;
+  }
+
+  .card-box {
+    width: 45%;
+  }
+
+  .product-card {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .product-card-img {
+    display: block;
+    margin: auto;
+    left: 0;
+  }
+
+
+  /* Footer Responsive */
+  .container-footer {
+    display: block;
+    z-index: -1;
+  }
+
+  .footer {
+    position: relative;
+    display: block;
+    background-color: var(--navbar-background);
+    width: 100%;
+    height: 100%;
+  }
+
+  .footer-title h5 {
+    position: relative;
+    top: 70px;
+    left: 200%;
+    font-family: var(--heading-font);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #FCFCFC !important;
+  }
+
+  .col-2 {
+    margin: 0 5% 5% 0;
+    padding: 0 7% 0 0;
+  }
+
+  .nav {
+    position: relative;
+    top: 80px;
+    left: 210% !important;
+    margin-bottom: 80px;
+  }
+
+  .navs-link {
+    color: #FCFCFC;
+    font-family: var(--sub-heading-font);
+    font-size: 10px;
+    text-decoration: none;
+  }
+
+  .pembayaran-text {
+    width: 300px;
+    font-size: 1.5rem;
+    position: relative;
+    top: 30px;
+    left: 70%;
+    font-family: var(--heading-font);
+    font-weight: 500;
+    color: #FCFCFC;
+  }
+
+  .logo-pembayaran {
+    position: relative;
+    top: 40px;
+    left: 30%;
+    width: 100%;
+    margin-bottom: 50%;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+
+  .footer-text {
+    text-align: center;
+  }
+
+  /* Product Responsive */
+  .product-title {
+    margin-top: 6px;
+  }
+
+  .wrapper-cards {
+    left: 2.5%;
+  }
+
+  .cards-space {
+    width: 50%;
+  }
+
+  .info {
+    margin-top: 20px;
+  }
+
+  /* Sidebar */
+  .btn-kategori {
+    display: none;
+  }
+
+  .sizeNav {
+    background-color: transparent;
+    position: absolute;
+    color: #000000;
+    width: 15%;
+    margin: 8px;
+    z-index: 1;
+    left: 3.5%;
+  }
+
+  .sideCanvas {
+    width: 75%;
+  }
+}
