@@ -52,7 +52,7 @@ function format_rupiah($total)
   <div class="row">
     <div class="col-12">
       <?php
-      include '../navbar.php';
+      include './navbar.php';
       ?>
 
     </div>
